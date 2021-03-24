@@ -38,7 +38,7 @@ require_once('tool_trigger_testcase.php');
 
 class tool_trigger_event_processor_testcase extends tool_trigger_testcase {
 
-    public function setup() {
+    public function setup():void {
         $this->resetAfterTest(true);
         // Create an event. This _is_ easier to do via direct DB insertions.
         $user = $this->getDataGenerator()->create_user();
@@ -63,7 +63,7 @@ class tool_trigger_event_processor_testcase extends tool_trigger_testcase {
         cron_setup_user();
     }
 
-    public function tearDown() {
+    public function tearDown():void {
         global $DB;
         // Manually clear all related DB tables. Avoids voodoo failing tests.
         $DB->delete_records('tool_trigger_run_hist', []);

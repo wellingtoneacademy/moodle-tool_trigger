@@ -29,12 +29,12 @@ require_once($CFG->dirroot . '/admin/tool/trigger/lib.php');
 
 class tool_trigger_steps_form_testcase extends advanced_testcase {
 
-    public function setUp() {
+    public function setUp():void {
         // Run as admin user.
         $this->setAdminUser();
     }
 
-    public function tearDown() {
+    public function tearDown():void {
         // Reset user for tests.
         $this->setUser();
     }
