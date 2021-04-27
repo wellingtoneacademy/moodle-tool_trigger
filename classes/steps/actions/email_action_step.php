@@ -145,7 +145,7 @@ class email_action_step extends base_action_step {
             $eventdata->userto = $user;
             $eventdata->subject = $emailsubject;
             $eventdata->fullmessage = $messageplain;
-            $eventdata->fullmessageformat = FORMAT_HTML;
+            $eventdata->fullmessageformat = FORMAT_MARKDOWN;
             $eventdata->fullmessagehtml = $emailcontent;
             $eventdata->smallmessage = $emailsubject;
             // Required for messaging framework.
